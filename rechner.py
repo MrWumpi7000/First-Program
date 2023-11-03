@@ -28,13 +28,14 @@ def viereck_rechung():
         print(seite_1 + 'cm' + ' * ' + seite_2 + 'cm' + ' = ', SEITE_1* SEITE_2, 'cm²')
         write(seite_1 + 'cm' + ' * ' + seite_2 + 'cm' + ' = ' + str(Ergebnis_for_write) + 'cm²')
         answer_vierecksrechner = ANTWORT('Wollen sie noch einen Flächeninhalt ausrechnen?')
+    except:
+        Bolean_Variable_1 = ANTWORT('Irgendetwas ist schief gelaufen... Wollen sie es nocheinmal versuchen? ')
+           
         if answer_vierecksrechner == True:
             viereck_rechung()
         elif answer_vierecksrechner == False:
             sys.exit('Vierecks-Rechner wurde erfolgreich Geschlossen...')
-    except:
-        Bolean_Variable_1 = ANTWORT('Irgendetwas ist schief gelaufen... Wollen sie es nocheinmal versuchen? ')
-           
+
         if  Bolean_Variable_1 == True:
             viereck_rechung()
         elif  Bolean_Variable_1 == False:
